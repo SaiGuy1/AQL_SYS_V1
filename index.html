@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics Dashboard</title>
+    <meta name="description" content="Interactive analytics dashboard with draggable charts" />
+    <meta name="author" content="Lovable" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="icon" href="/lovable-uploads/e8348c16-cd3e-49e0-b88d-e23a07634869.png" type="image/png">
+    
+    <!-- Role fix script - will run after application loads -->
+    <script>
+      // Monitor when app is fully loaded and window.forceReloadUserRole is available
+      document.addEventListener('DOMContentLoaded', function() {
+        // Try to fix the role after a short delay to ensure app initialization
+        setTimeout(function() {
+          if (window.forceReloadUserRole) {
+            console.log('Auto-running role fix...');
+            window.forceReloadUserRole();
+          }
+        }, 5000); // Wait 5 seconds for app to initialize
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
